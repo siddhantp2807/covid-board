@@ -51,12 +51,7 @@ function App() {
       <SelectId.Provider value={[selectedId, setSelectedId]}>
         <Wrapper>
           <Sidebar items={sidebarItems}/>
-          <Body>
-            <Card data={{"total": "1927394", "new" : "36432"}} Source={Increase} text="Coronavirus cases"/>
-            <Card data={{ "total": "1927394", "new": "36432" }} Source={Increase}  text="Coronavirus cases"/>
-            <Card data={{ "total": "1927394", "new": "36432" }} Source={Increase}  text="Coronavirus cases"/>
-
-          </Body>
+          <Body/>
         </Wrapper>
       </SelectId.Provider>
     </div>

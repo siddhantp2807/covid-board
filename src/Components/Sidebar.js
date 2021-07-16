@@ -9,7 +9,7 @@ const Sidebar = (props) => {
 
     return (
         <>
-            <div className={`flex flex-col hidden lg:block w-28 z-20 bg-gray-700 h-full mainNav`} onMouseEnter={() => {setExpanded(true)}} onMouseLeave={() => setExpanded(false)}>
+            <div className={`flex flex-col hidden lg:block w-28 z-20 bg-gray-700 h-full fixed mainNav`} onMouseEnter={() => {setExpanded(true)}} onMouseLeave={() => setExpanded(false)}>
 
                     <Brand/>
                     {props.items.map((elmt) => {
@@ -20,7 +20,7 @@ const Sidebar = (props) => {
                     
                     
             </div>
-            <div className={`flex flex-col hidden lg:block pt-24 z-10 bg-gray-700 slideNav w-48 ${expanded ? "show-nav" : "hide-nav"}`} onMouseEnter={() => { setExpanded(true) }} onMouseLeave={() => setExpanded(false)}>
+            <div className={`flex flex-col hidden lg:block h-full pt-24 z-10 bg-gray-700 slideNav w-48 ${expanded ? "show-nav" : "hide-nav"}`} onMouseEnter={() => { setExpanded(true) }} onMouseLeave={() => setExpanded(false)}>
                 {props.items.map((elmt) => {
                     return (
                         <BarText key={elmt.id} content={elmt.text} selected={selectContext === elmt.id} click={() => setSelectContext(elmt.id)}/>

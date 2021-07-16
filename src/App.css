@@ -11,8 +11,10 @@
 
 .hide-nav {
   left: -5rem;
+  position: fixed;
 }
 
 .show-nav {
   left: 7rem;
+  position: fixed;
 }
